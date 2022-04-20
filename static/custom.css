@@ -1,0 +1,53 @@
+.table-section{
+border: 2px solid blueviolet;
+border-radius: 5px;
+padding: 20px;
+display:inline-block;
+font-size: 20px;
+align-items:center;
+background-color: lightblue;
+text-align: center;
+margin-left:750px;
+margin-top:40px;
+}
+
+.anchor-button{
+border: 5px solid coral;
+border-radius: 5px;
+padding: 2px;
+display:inline-block;
+margin:10px;
+font-size: 25px;
+background-color: burlywood;
+}
+
+.Gender-options{
+list-style:none;
+}
+
+.Married-options{
+list-style:none;
+}
+
+.Education-options{
+list-style:none;
+}
+
+.self_employed-options{
+list-style:none;
+}
+
+.Credit_History-options{
+list-style:none;
+}
+
+.Property_Area-options{
+list-style:none;
+}
+
+.header-menu-section{
+display:flex;
+flex-direction: row;
+align-item: center;
+justify-content: flex-end;
+}

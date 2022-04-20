@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='custom.css') }}">
+    <title>Loan Form</title>
+
+</head>
+<body>
+
+<h1 style="text-align: center;color: crimson;font-size: 25px;">Loan Form</h1>
+
+
+<form action="http://localhost:5000/registrationform" method="post">
+    {{ form.hidden_tag }}
+
+    <div class="table-section">
+        <table>
+            <tr>
+                <td>Gender</td>
+                <td>{{ form.Gender(class='Gender-options') }}</td>
+            </tr>
+            <tr>
+                <td>Married</td>
+                <td>{{ form.Married(class='Married-options') }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.Dependents.label }}</td>
+                <td>{{ form.Dependents }}</td>
+            </tr>
+            <tr>
+                <td>Education</td>
+                <td>{{ form.Education(class='Education-options') }}</td>
+            </tr>
+            <tr>
+                <td>Self employed</td>
+                <td>{{ form.self_employed(class='self_employed-options') }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.Applicantincome.label }}</td>
+                <td>{{ form.Applicantincome }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.Coapplicantincome.label }}</td>
+                <td>{{ form.Coapplicantincome }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.Loanamount.label }}</td>
+                <td>{{ form.Loanamount }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.Loan_amount_term.label }}</td>
+                <td>{{ form.Loan_amount_term }}</td>
+            </tr>
+            <tr>
+                <td>Credit History</td>
+                <td>{{ form.Credit_History(class='Credit_History-options') }}</td>
+            </tr>
+            <tr>
+                <td>Property Area</td>
+                <td>{{ form.Property_Area(class='Property_Area-options') }}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>{{ form.submit(class='anchor-button') }}</td>
+            </tr>
+        </table>
+    </div>
+</form>
+
+{% if a %}
+
+<h1 style="text-align: center;color: blueviolet;font-size: 30px;">Congradulations!!! Your loan got approved</h1>
+
+{% endif %}
+
+</body>
+</html>
